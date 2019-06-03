@@ -6,4 +6,4 @@ before_install:
   - docker build -t keblu/docker-tuto -f Dockerfile.dev .
 
 script:
-  - docker run keblu/docker-tuto npm run test -- --coverage
+  - docker run -e CI=true keblu/docker-tuto npm run test -- --coverage
