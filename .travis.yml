@@ -3,8 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t keblu/docker-tuto -f dockerfile.dev .
+  - docker build -t keblu/docker-tuto -f Dockerfile.dev .
 
 script:
   - docker run keblu/docker-tuto npm run test -- --coverage
-  
